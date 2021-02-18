@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+}
+.result-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+span {
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  background-color: #363439;
+  color: white;
+  width: 55px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  margin: 1px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.number0 {
+  width: 110px;
+}
+.js-reset {
+  background-color: #a8aab1;
+}
+.plus,
+.minus,
+.multiply,
+.divide {
+  background-color: #fe8d00;
+}
