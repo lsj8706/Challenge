@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1><a href="/">Reddit Reader</a></h1>
+    <strong>Reading:
+      {%for subject in reading %}
+      r/{{subject}}
+      {% endfor %}
+    </strong>
+  </header>
+  <main>
+    {%for post in reddit%}
+    <div>
+      <h3>
+        <a href="https://www.reddit.com/{{post.url}}" target="_blank">{{post.title}}</a>
+      </h3>
+      <p>{{post.vote}} upvotes · r/{{post.subreddit}}</p>
+    </div>
+    <hr>
+    {%endfor%}
+  </main>
+</body>
+
+</html>

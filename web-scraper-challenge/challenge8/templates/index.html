@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+  
+<body>
+  <header>
+  <h1>SeJin News</h1>
+  <div>
+    <span>Order by: </span>
+    <a href="/?order_by=popular">Popular</a>
+    <span>|</span>
+    <a href="/?order_by=new">New</a>
+  </div>
+  </header>
+  {%for p in pop%}
+    <section>
+    <div>
+      <a href="/{{p.object_id}}" target="_blank">
+        <h2>{{p.title}}</h2>
+      </a>
+      <span>(<a href="{{p.url}}" target="_blank">
+        <span>{{p.url}}</span>
+      </a>)
+      </span>
+      </br>
+      <span>{{p.points}} points | </span>
+      <span>By: {{p.author}} | </span>
+      <span>{{p.num_comments}} comments</span>
+    </div>
+    <section>
+  {% endfor %}
+
+
+</body>
+
+</html>
